@@ -1,8 +1,4 @@
-package uca.desapp.Models;
-
-/**
- * Created by isi3 on 21/2/2017.
- */
+package uca.desapp.models;
 
 public class Tweet {
     private String text;

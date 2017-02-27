@@ -1,10 +1,13 @@
 package uca.desapp.api;
 
 import java.util.List;
+
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
-import uca.desapp.Models.Tweet;
+import uca.desapp.models.Tweet;
+import uca.desapp.models.User;
 
 public interface ApiInterface {
 
@@ -12,5 +15,8 @@ public interface ApiInterface {
     Call<List<Tweet>> getTweets();
 
     @POST("tweets")
-    Call<Tweet> createTweet();
+    Call<Tweet> createTweet(@Body Tweet tweet);
+
+    @POST("Users")
+    Call<User> signUp(@Body User user);
 }
